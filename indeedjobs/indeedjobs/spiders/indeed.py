@@ -4,7 +4,7 @@ from datetime import datetime
 class IndeedSpider(scrapy.Spider):
     name = 'indeed'
     allowed_domains = ['www.indeed.com']
-    start_urls = ['https://www.indeed.com/jobs?q=remote&start=10&pp=gQAPAAAAAAAAAAAAAAAB2xBc4gArAQEBBwCce2ft6qtCDt2_skJ5ms8UFJw5-0I5y0UpWmZnnzGTzw4vObux1wAA&vjk=ff2643494e46bae5']
+    start_urls = ['https://uk.indeed.com/jobs?q=graduate&l=London%2C%20Greater%20London&start=10&vjk=0fe9a7e476658f5c']
 
     def parse(self, response):
         cards = response.css("div.job_seen_beacon ")
