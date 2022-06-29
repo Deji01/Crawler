@@ -34,3 +34,6 @@ class IndeedSpider(scrapy.Spider):
             "job_summary":job_summary,
         }
         yield record
+
+        next_page = response.css("a > aria-label > Next::attr(href)").get()
+        yield response.follow(url=url, callback=self.parse)
